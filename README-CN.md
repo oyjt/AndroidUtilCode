@@ -1,6 +1,8 @@
-![logo][logo]
+[![logo][logo]](https://github.com/Blankj/AndroidUtilCode)
 
-[![auc][aucsvg]][auc] [![api][apisvg]][api] [![build][buildsvg]][build] [![Insight][insightsvg]][insight] [![License][licensesvg]][license]
+[![frame][frame]](https://github.com/Blankj/AucFrameTemplate)
+
+[![auc][aucSvg]][auc] [![result][apiSvg]][result] [![build][buildSvg]][build] [![License][licenseSvg]][license]
 
 ## [README of English][readme]
 
@@ -32,51 +34,54 @@
 
 ## Contact
 
-[![Blog][blogsvg]][blog] [![jianshu][jianshusvg]][jianshu] [![weibo][weibosvg]][weibo] [![QQGroup][qqgroupsvg]][qqgroup]
+[![Blog][blogSvg]][blog] [![jianshu][jianshuSvg]][jianshu] [![weibo][weiboSvg]][weibo] [![QQGroup][qqgroupSvg]][qqgroup]
 
 
-## [Update Log][update_log.md]
+## [Change Log][changeLog.md]
 
+
+## 打个小广告
+
+欢迎加入我的小专栏「**[基你太美](https://xiaozhuanlan.com/Blankj)**」一起学习。
 
 
 [logo]: https://raw.githubusercontent.com/Blankj/AndroidUtilCode/master/art/logo.png
 
-[aucsvg]: https://img.shields.io/badge/AndroidUtilCode-v1.20.3-brightgreen.svg
+[frame]: https://raw.githubusercontent.com/Blankj/AndroidUtilCode/master/art/auc_frame_cn.png
+
+[aucSvg]: https://github.com/Blankj/AndroidUtilCode/workflows/Android%20CI/badge.svg?branch=master
 [auc]: https://github.com/Blankj/AndroidUtilCode
 
-[apisvg]: https://img.shields.io/badge/API-14+-brightgreen.svg
-[api]: https://android-arsenal.com/api?level=14
+[apiSvg]: https://img.shields.io/badge/API-14+-brightgreen.svg
+[result]: https://android-arsenal.com/result?level=14
 
-[buildsvg]: https://travis-ci.org/Blankj/AndroidUtilCode.svg?branch=master
+[buildSvg]: https://travis-ci.org/Blankj/AndroidUtilCode.svg?branch=master
 [build]: https://travis-ci.org/Blankj/AndroidUtilCode
 
-[insightsvg]: https://www.insight.io/repoBadge/github.com/Blankj/AndroidUtilCode
-[insight]: https://insight.io/github.com/Blankj/AndroidUtilCode
-
-[licensesvg]: https://img.shields.io/badge/License-Apache--2.0-brightgreen.svg
+[licenseSvg]: https://img.shields.io/badge/License-Apache--2.0-brightgreen.svg
 [license]: https://github.com/Blankj/AndroidUtilCode/blob/master/LICENSE
 
 [readme]: https://github.com/Blankj/AndroidUtilCode
 [readme-cn]: https://github.com/Blankj/AndroidUtilCode/blob/master/README-CN.md
 
-[utilcode]: https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README.md
-[utilcode-cn]: https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md
+[utilcode]: https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README.md
+[utilcode-cn]: https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
 
-[subutil]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/README.md
-[subutil-cn]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/README-CN.md
+[subutil]: https://github.com/Blankj/AndroidUtilCode/blob/master/lib/subutil/README.md
+[subutil-cn]: https://github.com/Blankj/AndroidUtilCode/blob/master/lib/subutil/README-CN.md
 
-[update_log.md]: https://github.com/Blankj/AndroidUtilCode/blob/master/update_log.md
+[changeLog.md]: https://github.com/Blankj/AndroidUtilCode/blob/master/CHANGELOG.md
 
 [donate]: https://raw.githubusercontent.com/Blankj/AndroidUtilCode/master/art/donate.png
 
-[blogsvg]: https://img.shields.io/badge/Blog-@Blankj-34a48e.svg
+[blogSvg]: https://img.shields.io/badge/Blog-@Blankj-34a48e.svg
 [blog]: http://blankj.com
 
-[jianshusvg]: https://img.shields.io/badge/简书-@Blankj-34a48e.svg
+[jianshuSvg]: https://img.shields.io/badge/简书-@Blankj-34a48e.svg
 [jianshu]: http://www.jianshu.com/u/46702d5c6978
 
-[weibosvg]: https://img.shields.io/badge/weibo-@__Blankj-34a48e.svg
+[weiboSvg]: https://img.shields.io/badge/weibo-@__Blankj-34a48e.svg
 [weibo]: http://weibo.com/3076228982
 
-[qqgroupsvg]: https://img.shields.io/badge/QQ群-25206533-34a48e.svg
+[qqgroupSvg]: https://img.shields.io/badge/QQ群-25206533-34a48e.svg
 [qqgroup]: https://shang.qq.com/wpa/qunwpa?idkey=d906789f84484465e2736f7b524366b4c23afeda38733d5c7b10fc3f6e406e9b
