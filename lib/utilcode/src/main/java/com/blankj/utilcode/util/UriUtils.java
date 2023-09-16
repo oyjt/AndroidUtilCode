@@ -10,7 +10,6 @@ import android.os.Environment;
 import android.os.storage.StorageManager;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -20,6 +19,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Array;
 import java.lang.reflect.Method;
+
+import androidx.core.content.FileProvider;
 
 /**
  * <pre>
@@ -56,7 +57,7 @@ public final class UriUtils {
     public static Uri file2Uri(final File file) {
         if (!UtilsBridge.isFileExists(file)) return null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            String authority = Utils.getApp().getPackageName() + ".utilcode.provider";
+            String authority = Utils.getApp().getPackageName() + ".utilcode.fileprovider";
             return FileProvider.getUriForFile(Utils.getApp(), authority, file);
         } else {
             return Uri.fromFile(file);
@@ -76,6 +77,17 @@ public final class UriUtils {
         return copyUri2Cache(uri);
     }
 
+    /**
+     * Uri to file, without creating the cache copy if the path cannot be resolved.
+     *
+     * @param uri The uri.
+     * @return file
+     */
+    public static File uri2FileNoCacheCopy(final Uri uri) {
+        if (uri == null) return null;
+        return uri2FileReal(uri);
+    }
+    
     /**
      * Uri to file.
      *

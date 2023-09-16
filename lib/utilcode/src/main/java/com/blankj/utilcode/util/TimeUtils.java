@@ -1,7 +1,8 @@
 package com.blankj.utilcode.util;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.NonNull;
+import android.os.Build;
+import android.provider.Settings;
 
 import com.blankj.utilcode.constant.TimeConstants;
 
@@ -14,6 +15,8 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+
+import androidx.annotation.NonNull;
 
 /**
  * <pre>
@@ -36,6 +39,19 @@ public final class TimeUtils {
     private static SimpleDateFormat getDefaultFormat() {
         return getSafeDateFormat("yyyy-MM-dd HH:mm:ss");
     }
+    /**
+     * Checks whether the device is using Network Provided Time or not.
+     *  Useful in situations where you want to verify that the device has a correct time set, to avoid fraud, or if you want to prevent the user from messing with the time and abusing your "one-time" and "expiring" features. 
+     * @return {@code true}: yes<br>{@code false}: no
+     */
+    public static boolean isUsingNetworkProvidedTime() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            return Settings.Global.getInt(Utils.getApp().getContentResolver(), Settings.Global.AUTO_TIME, 0) == 1;
+        } else {
+            return android.provider.Settings.System.getInt(Utils.getApp().getContentResolver(), android.provider.Settings.System.AUTO_TIME, 0) == 1;
+        }
+    }
+    
 
     @SuppressLint("SimpleDateFormat")
     public static SimpleDateFormat getSafeDateFormat(String pattern) {

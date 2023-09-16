@@ -14,11 +14,16 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -317,15 +322,17 @@ public class MessengerUtils {
         }
 
         private void sendMsg2Client(final Message msg) {
+           final Message obtain = Message.obtain(msg); //Copy the original
             for (Messenger client : mClientMap.values()) {
                 try {
                     if (client != null) {
-                        client.send(msg);
+                        client.send(Message.obtain(obtain));
                     }
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
             }
+            obtain.recycle(); //Recycled copy
         }
 
         private void consumeServerProcessCallback(final Message msg) {

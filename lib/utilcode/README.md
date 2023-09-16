@@ -2,10 +2,11 @@
 
 Gradle:
 ```groovy
-implementation 'com.blankj:utilcode:1.30.6'
-
 // if u use AndroidX, use the following
-implementation 'com.blankj:utilcodex:1.30.6'
+implementation 'com.blankj:utilcodex:1.31.1'
+
+// Not in maintenance
+implementation 'com.blankj:utilcode:1.30.7'
 ```
 
 
@@ -71,6 +72,8 @@ getAppName
 getAppPath
 getAppVersionName
 getAppVersionCode
+getAppMinSdkVersion
+getAppTargetSdkVersion
 getAppSignatures
 getAppSignaturesSHA1
 getAppSignaturesSHA256
@@ -139,6 +142,7 @@ getNavBarColor
 isSupportNavBar
 setNavBarLightMode
 isNavBarLightMode
+transparentNavBar
 ```
 
 * ### About Brightness -> [BrightnessUtils.java][brightness.java] -> [Demo][brightness.demo]
@@ -1208,6 +1212,7 @@ removeListener
 res2Uri
 file2Uri
 uri2File
+uri2FileNoCacheCopy
 uri2Bytes
 ```
 

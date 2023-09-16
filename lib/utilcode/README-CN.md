@@ -2,10 +2,11 @@
 
 Gradle:
 ```groovy
-implementation 'com.blankj:utilcode:1.30.6'
-
 // if u use AndroidX, use the following
-implementation 'com.blankj:utilcodex:1.30.6'
+implementation 'com.blankj:utilcodex:1.31.1'
+
+// Not in maintenance
+implementation 'com.blankj:utilcode:1.30.7'
 ```
 
 
@@ -71,6 +72,8 @@ getAppName                        : 获取 App 名称
 getAppPath                        : 获取 App 路径
 getAppVersionName                 : 获取 App 版本号
 getAppVersionCode                 : 获取 App 版本码
+getAppMinSdkVersion               : 获取 App 支持最低系统版本号
+getAppTargetSdkVersion            : 获取 App 目标系统版本号
 getAppSignatures                  : 获取 App 签名
 getAppSignaturesSHA1              : 获取应用签名的的 SHA1 值
 getAppSignaturesSHA256            : 获取应用签名的的 SHA256 值
@@ -78,6 +81,7 @@ getAppSignaturesMD5               : 获取应用签名的的 MD5 值
 getAppInfo                        : 获取 App 信息
 getAppsInfo                       : 获取所有已安装 App 信息
 getApkInfo                        : 获取 Apk 信息
+isFirstTimeInstalled              : 判断应用是否首次安装
 ```
 
 * ### 数组相关 -> [ArrayUtils.java][array.java] -> [Test][array.test]
@@ -139,6 +143,7 @@ getNavBarColor                       : 获取导航栏颜色
 isSupportNavBar                      : 判断是否支持导航栏
 setNavBarLightMode                   : 设置导航栏是否为浅色模式
 isNavBarLightMode                    : 判断导航栏是否为浅色模式
+transparentNavBar                    : 透明导航栏
 ```
 
 * ### 亮度相关 -> [BrightnessUtils.java][brightness.java] -> [Demo][brightness.demo]
@@ -1205,10 +1210,11 @@ removeListener: 移除消息监听器
 
 * ### URI 相关 -> [UriUtils.java][uri.java]
 ```
-res2Uri  : res 转 uri
-file2Uri : file 转 uri
-uri2File : uri 转 file
-uri2Bytes: uri 转 bytes
+res2Uri            : res 转 uri
+file2Uri           : file 转 uri
+uri2File           : uri 转 file
+uri2FileNoCacheCopy: uri 转 file 不拷贝缓存
+uri2Bytes          : uri 转 bytes
 ```
 
 * ### UtilsTransActivity -> [UtilsTransActivity.java][trans.java]
